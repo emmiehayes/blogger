@@ -5,7 +5,7 @@ describe "user sees one article" do
 		it "displays information for one article" do
       article = Article.create!(title: 'Title_1', body: 'Body_1')
 
-      visit '/articles/index'
+      visit articles_path
       click_link article.title
 
       expect(page).to have_content(article.title)
