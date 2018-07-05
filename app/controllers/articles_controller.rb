@@ -6,6 +6,8 @@ before_action :set_article, only: [:show, :destroy, :edit, :update]
   end
 
   def show
+    @comment = Comment.new
+    @comment.article_id = @article.id
   end
 
   def new
@@ -20,7 +22,6 @@ before_action :set_article, only: [:show, :destroy, :edit, :update]
 
   def destroy
     @article.destroy
-
     redirect_to articles_path
   end
 
