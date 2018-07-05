@@ -20,6 +20,7 @@ before_action :set_article, only: [:show, :destroy, :edit, :update]
 
   def destroy
     @article.destroy
+
     redirect_to articles_path
   end
 
