@@ -15,6 +15,7 @@ describe "user can edit an article" do
 
         expect(page).to have_content('Title has been updated!')
         expect(page).to have_content('Body has been updated!')
+        expect(page).to have_content('Article Updated!')
       end
     end
   end

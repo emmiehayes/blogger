@@ -29,6 +29,7 @@ before_action :set_article, only: [:show, :destroy, :edit, :update]
 
   def update
     @article.update(article_params)
+    flash.notice = "Article Updated!"
     redirect_to article_path(@article)
   end
 
